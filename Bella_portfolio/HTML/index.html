@@ -17,52 +17,88 @@
         </nav>
     </header>
 
-    <section id="about">
-        <h1>Hi, I'm Bella Willoughby</h1>
-        <div id="about">
-            <div id="headshot-container">
-                <img src="/Headshot.jpg" id="headshot" alt="Bella Willoughby Headshot">
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="/Headshot.jpg" alt="Bella Willoughby Headshot" class="headshot">
+                </div>
+                <div class="about-description">
+                    <h1>Bella Willoughby</h1>
+                    <p>
+                        I'm pursuing a BS in Business Administration with an emphasis in both Marketing and Business Analytics 
+                        and a minor in Creative Technology and Design (CTD) from the University of Colorado Boulder.
+                        <br><br>
+                        During my time at CU Boulder, I have gained skills in communication strategies, marketing strategies, programming 
+                        skills in SQL, Python, and R-Studio, design skills, and content creation. 
+                        I am passionate about technological advancements and am excited for future opportunities!
+                        <br><br>
+                        In my free time, I enjoy traveling, skiing, dining at new restaurants, contributing to my sorority 
+                        Kappa Alpha Theta, and capturing the perfect sunset photo.
+                        <br><br>
+                        <a href="https://docs.google.com/document/d/1LbcghBcmfyamTThETzIN4ZHeQhp2QPcEH4WCd3hlcKA/edit?tab=t.0f" target="_blank" class="btn">Download Resume</a>
+
+                    </p>
+                </div>
             </div>
-        <p>I'm pursing a BS in Business Administration with an emphasis in both Marketing and Business Analytics with a minor in Creative Technology and Design (CTD) from the college of Business and Engineering at the University of Colorado Boulder.
-            <br>
-            <br>
-            During my time at CU Boulder, I have gained skills in communication strategies, marketing startegies, an understanding of all the major business fields, programming skills in platforms such as SQL, Python, Alteryx, R-Studio, design skills, and more.
-            Moreover, I have developed a passion in social media marketing and content creation. 
-            This has allowed me to become efficnet with technology as I am able to problem-solve and work through multiple coding platforms.
-            Additionally, I have learned a plethora of skills throughout my four years at CU, and I will continue to grow within these fields.
-            <br><br>
-            I'm intrested in technological advancements and I can't wait to see what opportunities arise in the future!
-            <br> <br> 
-              I'm originally from Northern Virginia, just outside of Washington D.C. In my free time I enjoy travel, skiing, dining at new restaurants, spending time with family and friends, contributing to my Sorority, Kappa Alpha Theta, and taking the perfect sunset picture!
-            These programs emphasize problem-solving, creativity, analytics, critical thinking, design, and more! </p>
-        <a href="Resume.pdf" target="_blank" class="btn">Download Resume</a>
-    </section>
+        </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <!-- Add project cards dynamically with JavaScript -->
-             <a href="Project1.html" target="blank" class="btn">Social Media Work for I Do Prenups</a>
-             <a href="Project2.html" target="blank" class="btn">Marketing Brochures & Renderings for BeaconCrest Homes</a>
-             <a href="Project3.html" target="blank" class="btn">Kappa Alpha Theta Recruitment & Bid Day 2022-2024</a>
-        </div>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="filter-container">
+                <select id="filter-dropdown" class="filter-dropdown">
+                    <option value="all">See All</option>
+                    <option value="marketing">Marketing Related</option>
+                    <option value="internship">Past Internships</option>
+                    <option value="event">Events</option>
+                </select>
+            </div>
+            <div class="projects-container">
+                <!-- Project Cards -->
+                <div class="project-card" data-category="marketing internship">
+                    <img src="/IDP.png" alt="Social Media Work for I Do Prenups" class="project-img">
+                    <div class="project-details">
+                        <h3>Social Media Work for I Do Prenups</h3>
+                        <p>Explore social media strategies and content creation for I Do Prenups.</p>
+                        <a href="Project1.html" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="marketing internship">
+                    <img src="/BeaconCrestHomes.png" alt="BeaconCrest Homes Marketing" class="project-img">
+                    <div class="project-details">
+                        <h3>Marketing Brochures & Renderings for BeaconCrest Homes</h3>
+                        <p>Showcasing marketing materials and renderings for BeaconCrest Homes.</p>
+                        <a href="Project2.html" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="event">
+                    <img src="/Theta.png" alt="Kappa Alpha Theta Recruitment" class="project-img">
+                    <div class="project-details">
+                        <h3>Kappa Alpha Theta Recruitment & Bid Day 2022-2024</h3>
+                        <p>Highlights from Kappa Alpha Theta's recruitment and bid day events.</p>
+                        <a href="Project3.html" target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>I'd love to hear from you!</p>
-        <p>Email: <a href="mailto:iwillow1222@gmail.com">iwillow1222@gmail.com</a></p>
-        <p>Phone: <a href="tel:571-386-8944">571-386-8944</a></p>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/isabellawilloughby/" target="_blank">LinkedIn</a>
-        </div>
-     
-    </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <p>Email: <a href="mailto:iwillow1222@gmail.com">iwillow1222@gmail.com</a></p>
+            <p>Phone: <a href="tel:571-386-8944">571-386-8944</a></p>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/isabellawilloughby/" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 [Bella Willoughby]</p>
+        <p>&copy; 2024 Bella Willoughby</p>
     </footer>
 
-    <script src="JS/main.js"></script>
+    <script src="../JS/main.js"></script>
 </body>
 </html>

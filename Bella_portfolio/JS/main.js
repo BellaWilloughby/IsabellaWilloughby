@@ -6,36 +6,63 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "Project1.html",
             description: "Explore social media strategies and content creation for I Do Prenups.",
             img: "/IDP.png",
+            category: "marketing internship",
         },
         {
             title: "Marketing Brochures & Renderings for BeaconCrest Homes",
             link: "Project2.html",
             description: "Showcasing marketing materials and renderings for BeaconCrest Homes.",
-            img: "/BeaconCrestHones.png",
+            img: "/BeaconCrestHomes.png",
+            category: "marketing internship",
         },
         {
             title: "Kappa Alpha Theta Recruitment & Bid Day 2022-2024",
             link: "Project3.html",
             description: "Highlights from Kappa Alpha Theta's recruitment and bid day events.",
             img: "/Theta.png",
+            category: "event",
         },
     ];
 
-    // Reference to the project list container
-    const projectList = document.querySelector(".project-list");
+    // Reference to the project container and filter dropdown
+    const projectContainer = document.querySelector(".projects-container");
+    const filterDropdown = document.getElementById("filter-dropdown");
 
-    // Dynamically create project cards
-    projects.forEach((project) => {
-        const projectCard = document.createElement("div");
-        projectCard.classList.add("project-card");
+    // Function to create and display project cards
+    const displayProjects = (filter = "all") => {
+        // Clear previous projects
+        projectContainer.innerHTML = "";
 
-        projectCard.innerHTML = `
-            <img src="${project.img}" alt="${project.title}" class="project-img">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <a href="${project.link}" target="_blank" class="btn">View Project</a>
-        `;
+        // Filter projects based on the selected category
+        const filteredProjects = filter === "all" 
+            ? projects 
+            : projects.filter(project => project.category.includes(filter));
 
-        projectList.appendChild(projectCard);
+        // Create and append project cards
+        filteredProjects.forEach((project) => {
+            const projectCard = document.createElement("div");
+            projectCard.classList.add("project-card");
+            projectCard.setAttribute("data-category", project.category);
+
+            projectCard.innerHTML = `
+                <img src="${project.img}" alt="${project.title}" class="project-img">
+                <div class="project-details">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <a href="${project.link}" target="_blank" class="btn">View Project</a>
+                </div>
+            `;
+
+            projectContainer.appendChild(projectCard);
+        });
+    };
+
+    // Display all projects initially
+    displayProjects();
+
+    // Filter projects when the dropdown changes
+    filterDropdown.addEventListener("change", (e) => {
+        const filterValue = e.target.value;
+        displayProjects(filterValue);
     });
 });
